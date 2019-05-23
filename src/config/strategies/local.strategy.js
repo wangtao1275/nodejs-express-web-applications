@@ -9,7 +9,8 @@ module.exports = function localStrategy() {
     passwordField: 'password',
   }, (username, password, done) => {
     const url = 'mongodb://localhost:27017';
-    const dbName = 'libraryApp'(async function mongo() {
+    const dbName = 'libraryApp';
+    (async function mongo() {
       let client;
       try {
         client = await MongoClient.connect(url);
